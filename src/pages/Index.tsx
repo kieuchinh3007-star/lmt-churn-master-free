@@ -20,8 +20,7 @@ const Index = () => {
               Free <span className="text-primary">Churn Rate Calculator</span> for SaaS & eCommerce
             </h1>
             <p className="text-muted-foreground text-lg mb-8">
-              Instantly calculate your customer churn rate and track retention performance over time. 
-              No setup or login required — just enter your data and get insights.
+              Learn how to calculate churn rate in seconds with this free online tool. Instantly measure your customer retention performance - no setup or login required
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
