@@ -370,7 +370,7 @@ ${results.annualizedChurn ? `Annualized Churn,${results.annualizedChurn.toFixed(
                   </div>
                   <div>
                     <p className="text-sm font-medium text-muted-foreground mb-1">Retention Rate</p>
-                    <p className="text-4xl font-bold text-secondary">
+                    <p className="text-4xl font-bold text-[#fac02e]">
                       {results.retentionRate.toFixed(2)}%
                     </p>
                   </div>
@@ -429,7 +429,7 @@ ${results.annualizedChurn ? `Annualized Churn,${results.annualizedChurn.toFixed(
                 <ul className="space-y-3">
                   {getActionableTips().map((tip, index) => (
                     <li key={index} className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
+                      <CheckCircle2 className="w-5 h-5 text-[#fac02e] mt-0.5 flex-shrink-0" />
                       <span className="text-muted-foreground">{tip}</span>
                     </li>
                   ))}
