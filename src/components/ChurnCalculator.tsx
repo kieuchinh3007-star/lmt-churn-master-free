@@ -40,14 +40,14 @@ export const ChurnCalculator = () => {
           Churn Rate Calculator
         </CardTitle>
         <CardDescription className="text-muted-foreground">
-          Tính toán tỷ lệ khách hàng rời bỏ trong một khoảng thời gian
+          Calculate customer churn rate over any time period
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-6">
         <div className="grid gap-6">
           <div className="space-y-2">
             <Label htmlFor="beginning" className="text-sm font-medium text-foreground">
-              Số khách hàng đầu kỳ
+              Beginning Customers
             </Label>
             <Input
               id="beginning"
@@ -61,7 +61,7 @@ export const ChurnCalculator = () => {
 
           <div className="space-y-2">
             <Label htmlFor="ending" className="text-sm font-medium text-foreground">
-              Số khách hàng cuối kỳ
+              Ending Customers
             </Label>
             <Input
               id="ending"
@@ -75,7 +75,7 @@ export const ChurnCalculator = () => {
 
           <div className="space-y-2">
             <Label htmlFor="new" className="text-sm font-medium text-foreground">
-              Số khách hàng mới thu hút được
+              New Customers Acquired
             </Label>
             <Input
               id="new"
@@ -99,9 +99,9 @@ export const ChurnCalculator = () => {
               </div>
               {churnedCustomers !== null && (
                 <div className="pt-4 border-t border-border/50">
-                  <p className="text-sm font-medium text-muted-foreground mb-1">Số khách hàng rời bỏ</p>
+                  <p className="text-sm font-medium text-muted-foreground mb-1">Churned Customers</p>
                   <p className="text-2xl font-semibold text-foreground">
-                    {churnedCustomers.toFixed(0)} khách hàng
+                    {churnedCustomers.toFixed(0)} customers
                   </p>
                 </div>
               )}
