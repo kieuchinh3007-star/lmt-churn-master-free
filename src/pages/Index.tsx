@@ -490,7 +490,7 @@ const Index = () => {
                   </p>
                   <Button 
                     asChild
-                    variant="secondary"
+                    variant="default"
                     className="w-full"
                   >
                     <a 
@@ -520,7 +520,7 @@ const Index = () => {
                   </p>
                   <Button 
                     asChild
-                    variant="secondary"
+                    variant="default"
                     className="w-full"
                   >
                     <a 
@@ -550,7 +550,7 @@ const Index = () => {
                   </p>
                   <Button 
                     asChild
-                    variant="secondary"
+                    variant="default"
                     className="w-full"
                   >
                     <a 
