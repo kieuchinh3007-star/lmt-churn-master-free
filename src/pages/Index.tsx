@@ -22,11 +22,11 @@ const Index = () => {
       {/* How to Use Section */}
       <section className="container mx-auto px-4 py-16 md:py-24">
         <div className="max-w-4xl mx-auto">
-          <div className="flex items-center gap-3 mb-8">
+          <div className="flex items-center justify-center gap-3 mb-8">
             <div className="p-2 rounded-lg bg-primary/10">
               <Calculator className="w-6 h-6 text-primary" />
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center">
               How to Use the Churn Rate Calculator
             </h2>
           </div>
@@ -95,11 +95,11 @@ const Index = () => {
       <section className="bg-muted/30 py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="flex items-center gap-3 mb-8">
+            <div className="flex items-center justify-center gap-3 mb-8">
               <div className="p-2 rounded-lg bg-secondary/10">
                 <CheckCircle2 className="w-6 h-6 text-secondary" />
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center">
                 Why Use Our Churn Rate Calculator?
               </h2>
             </div>
@@ -168,11 +168,11 @@ const Index = () => {
       {/* Metrics Explanation Section */}
       <section className="container mx-auto px-4 py-16 md:py-24">
         <div className="max-w-4xl mx-auto">
-          <div className="flex items-center gap-3 mb-8">
+          <div className="flex items-center justify-center gap-3 mb-8">
             <div className="p-2 rounded-lg bg-primary/10">
               <BarChart3 className="w-6 h-6 text-primary" />
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center">
               Understanding Churn Rate Metrics
             </h2>
           </div>
@@ -260,11 +260,11 @@ const Index = () => {
       <section className="bg-muted/30 py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="flex items-center gap-3 mb-8">
+            <div className="flex items-center justify-center gap-3 mb-8">
               <div className="p-2 rounded-lg bg-accent/10">
                 <HelpCircle className="w-6 h-6 text-accent" />
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center">
                 Churn Rate Calculator FAQ
               </h2>
             </div>
