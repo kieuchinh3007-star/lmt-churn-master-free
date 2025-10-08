@@ -36,12 +36,12 @@ const Index = () => {
               <CardHeader>
                 <CardTitle className="flex items-center gap-3">
                   <span className="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-primary-foreground text-sm font-bold">1</span>
-                  Enter Beginning Customers
+                  Choose Churn Type
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Enter the number of customers you had at the start of the time period you want to measure (e.g., beginning of the month or quarter).
+                  Select between Customer Churn (for tracking customer count) or Revenue Churn (for tracking MRR/ARR). This determines what metrics you'll be measuring.
                 </p>
               </CardContent>
             </Card>
@@ -50,12 +50,12 @@ const Index = () => {
               <CardHeader>
                 <CardTitle className="flex items-center gap-3">
                   <span className="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-primary-foreground text-sm font-bold">2</span>
-                  Enter Ending Customers
+                  Enter Your Data
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Enter the number of customers remaining at the end of the measurement period.
+                  Input the number of customers (or revenue) at the start of the period, at the end of the period, and new customers (or revenue) acquired during the period. Hover over the help icons for detailed explanations.
                 </p>
               </CardContent>
             </Card>
@@ -64,12 +64,12 @@ const Index = () => {
               <CardHeader>
                 <CardTitle className="flex items-center gap-3">
                   <span className="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-primary-foreground text-sm font-bold">3</span>
-                  Enter New Customers
+                  Select Time Period
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Enter the number of new customers you acquired during the measurement period.
+                  Choose the measurement period: Monthly, Quarterly, or Yearly. For monthly calculations, the tool will also show annualized churn rate automatically.
                 </p>
               </CardContent>
             </Card>
@@ -78,12 +78,12 @@ const Index = () => {
               <CardHeader>
                 <CardTitle className="flex items-center gap-3">
                   <span className="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-primary-foreground text-sm font-bold">4</span>
-                  Get Instant Results
+                  Calculate & Analyze
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  The Churn Rate Calculator automatically calculates and displays your churn rate and the number of customers churned.
+                  Click "Calculate Churn Rate" to see your churn rate, retention rate, lost customers, and actionable insights. Export results as CSV or copy to clipboard for further analysis.
                 </p>
               </CardContent>
             </Card>
@@ -110,11 +110,11 @@ const Index = () => {
                   <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center mb-3">
                     <TrendingDown className="w-6 h-6 text-white" />
                   </div>
-                  <CardTitle>100% Free</CardTitle>
+                  <CardTitle>Fast & Free</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    Completely free tool with no registration or installation required. Use it instantly in your browser.
+                    Instant calculations without Excel. Completely free tool with no registration or installation required.
                   </p>
                 </CardContent>
               </Card>
@@ -124,11 +124,11 @@ const Index = () => {
                   <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center mb-3">
                     <Calculator className="w-6 h-6 text-white" />
                   </div>
-                  <CardTitle>Accurate Calculations</CardTitle>
+                  <CardTitle>Accurate & Flexible</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    Uses industry-standard formulas to ensure accurate and reliable churn rate results.
+                    Uses industry-standard formulas with support for customer churn, revenue churn (MRR/ARR), and multiple time periods.
                   </p>
                 </CardContent>
               </Card>
@@ -138,11 +138,11 @@ const Index = () => {
                   <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center mb-3">
                     <BarChart3 className="w-6 h-6 text-white" />
                   </div>
-                  <CardTitle>Instant Results</CardTitle>
+                  <CardTitle>Actionable Insights</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    Get immediate results as you enter data, helping you make quick and informed business decisions.
+                    Get immediate results with detailed breakdown, retention metrics, and personalized tips to reduce churn.
                   </p>
                 </CardContent>
               </Card>
@@ -152,11 +152,11 @@ const Index = () => {
                   <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center mb-3">
                     <Users className="w-6 h-6 text-white" />
                   </div>
-                  <CardTitle>Easy to Use</CardTitle>
+                  <CardTitle>Export & Share</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    Intuitive interface that's user-friendly. No complex technical knowledge required.
+                    Copy results to clipboard or export as CSV for presentations, reports, and further analysis.
                   </p>
                 </CardContent>
               </Card>
@@ -188,7 +188,7 @@ const Index = () => {
                 </p>
                 <div className="p-4 bg-muted rounded-lg">
                   <p className="font-mono text-sm text-foreground">
-                    Formula: Churn Rate = (Churned Customers / Beginning Customers) × 100%
+                    Formula: Churn Rate = (Lost Customers / Customers at Start) × 100%
                   </p>
                 </div>
               </CardContent>
@@ -196,45 +196,60 @@ const Index = () => {
 
             <Card className="border-border/50 shadow-[var(--shadow-card)]">
               <CardHeader>
-                <CardTitle className="text-primary">Beginning Customers</CardTitle>
+                <CardTitle className="text-primary">Retention Rate</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="space-y-4">
                 <p className="text-muted-foreground">
-                  The total number of customers you have at the start of the measurement period. For example, if measuring January, this is your customer count on January 1st.
+                  Retention Rate is the inverse of churn rate, showing the percentage of customers who continued using your product during the period. Higher retention means better customer loyalty.
                 </p>
+                <div className="p-4 bg-muted rounded-lg">
+                  <p className="font-mono text-sm text-foreground">
+                    Formula: Retention Rate = 1 - Churn Rate
+                  </p>
+                </div>
               </CardContent>
             </Card>
 
             <Card className="border-border/50 shadow-[var(--shadow-card)]">
               <CardHeader>
-                <CardTitle className="text-primary">Ending Customers</CardTitle>
+                <CardTitle className="text-primary">Lost Customers</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
-                  The total number of customers remaining at the end of the measurement period. This includes both existing customers who stayed and new customers acquired.
+                <p className="text-muted-foreground mb-4">
+                  The actual number of customers who left during the period. Calculated by accounting for both new acquisitions and final customer count.
                 </p>
+                <div className="p-4 bg-muted rounded-lg">
+                  <p className="font-mono text-sm text-foreground">
+                    Formula: Lost = Customers at Start + New Customers - Customers at End
+                  </p>
+                </div>
               </CardContent>
             </Card>
 
             <Card className="border-border/50 shadow-[var(--shadow-card)]">
               <CardHeader>
-                <CardTitle className="text-primary">New Customers</CardTitle>
+                <CardTitle className="text-primary">Revenue Churn (MRR/ARR)</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  The number of new customers acquired during the measurement period. To accurately calculate churned customers, these new customers need to be excluded from the total.
+                  Instead of tracking customer count, revenue churn measures the percentage of recurring revenue lost. This is particularly useful for businesses with variable pricing or upsell opportunities. Switch to "Revenue Churn" mode to calculate MRR (Monthly Recurring Revenue) or ARR (Annual Recurring Revenue) churn.
                 </p>
               </CardContent>
             </Card>
 
             <Card className="border-border/50 shadow-[var(--shadow-card)] bg-gradient-to-br from-secondary/5 to-primary/5">
               <CardHeader>
-                <CardTitle className="text-secondary">Churned Customers</CardTitle>
+                <CardTitle className="text-secondary">Annualized Churn</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="space-y-4">
                 <p className="text-muted-foreground">
-                  The actual number of customers who left during the period. Calculated as: Beginning Customers - Ending Customers + New Customers.
+                  For monthly churn calculations, annualized churn projects your churn rate over a full year. This helps compare monthly data to annual benchmarks and understand long-term retention trends.
                 </p>
+                <div className="p-4 bg-muted rounded-lg">
+                  <p className="font-mono text-sm text-foreground">
+                    Formula: Annualized = 1 - (1 - Monthly Churn)^12
+                  </p>
+                </div>
               </CardContent>
             </Card>
           </div>
@@ -257,44 +272,44 @@ const Index = () => {
             <div className="space-y-4">
               <Card className="border-border/50 shadow-[var(--shadow-card)]">
                 <CardHeader>
-                  <CardTitle className="text-lg">What is a good Churn Rate?</CardTitle>
+                  <CardTitle className="text-lg">What is the Churn Rate Calculator and how does it work?</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    A good churn rate depends on your industry. For B2B SaaS, 5-7% annual churn rate is acceptable. For B2C, it can be higher at 10-15%. The general rule: lower churn rate is better, as retaining existing customers is usually cheaper than acquiring new ones.
+                    The Churn Rate Calculator helps you measure customer attrition over a period by comparing customers at start, customers at end, and new customers acquired. It uses the industry-standard formula: Churn Rate = (Lost Customers / Customers at Start) × 100%.
                   </p>
                 </CardContent>
               </Card>
 
               <Card className="border-border/50 shadow-[var(--shadow-card)]">
                 <CardHeader>
-                  <CardTitle className="text-lg">How can I reduce my Churn Rate?</CardTitle>
+                  <CardTitle className="text-lg">How accurate is the Churn Rate Calculator for subscription businesses?</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    To reduce churn rate: (1) Improve product/service quality, (2) Enhance customer support, (3) Analyze why customers leave, (4) Build customer retention programs, (5) Collect regular feedback for continuous improvement.
+                    The Churn Rate Calculator uses standard industry formulas, making it ideal for subscription or SaaS businesses. For deeper insights, you can switch to revenue churn mode (MRR/ARR) or enable cohort-based analysis. Accuracy depends on the quality of your input data.
                   </p>
                 </CardContent>
               </Card>
 
               <Card className="border-border/50 shadow-[var(--shadow-card)]">
                 <CardHeader>
-                  <CardTitle className="text-lg">How often should I calculate Churn Rate?</CardTitle>
+                  <CardTitle className="text-lg">Can the Churn Rate Calculator compute revenue or annualized churn?</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    Calculate churn rate monthly to track trends and detect issues early. For new businesses, weekly calculations may be helpful. However, also track quarterly and annual churn rates for a comprehensive view of long-term trends and industry comparisons.
+                    Yes! The calculator supports both customer churn and revenue churn (MRR/ARR) modes. For monthly calculations, it also automatically displays annualized churn using the formula: 1 - (1 - monthly_churn)^12, giving you a yearly perspective.
                   </p>
                 </CardContent>
               </Card>
 
               <Card className="border-border/50 shadow-[var(--shadow-card)]">
                 <CardHeader>
-                  <CardTitle className="text-lg">Is the Churn Rate Calculator accurate?</CardTitle>
+                  <CardTitle className="text-lg">How can I reduce churn after using the Churn Rate Calculator?</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    Our Churn Rate Calculator uses the industry-standard formula widely accepted across business sectors. Accuracy depends on the data you input. Ensure your beginning customers, ending customers, and new customer numbers are accurate for the most reliable churn rate results.
+                    Use the actionable insights provided by the calculator: improve customer onboarding, run re-engagement campaigns, optimize pricing strategies, analyze churn-prone customer cohorts, conduct exit surveys, and implement proactive customer success initiatives based on your churn rate results.
                   </p>
                 </CardContent>
               </Card>
