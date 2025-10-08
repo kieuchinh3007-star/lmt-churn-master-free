@@ -390,7 +390,7 @@ ${results.annualizedChurn ? `Annualized Churn,${results.annualizedChurn.toFixed(
                   {results.annualizedChurn !== undefined && (
                     <div>
                       <p className="text-sm font-medium text-muted-foreground mb-1">Annualized Churn</p>
-                      <p className="text-2xl font-semibold text-foreground">
+                      <p className="text-2xl font-semibold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                         {results.annualizedChurn.toFixed(2)}%
                       </p>
                     </div>
