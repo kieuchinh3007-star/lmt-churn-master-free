@@ -9,7 +9,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-background via-background to-muted/30">
       {/* Hero Section */}
-      <section className="bg-[#F3F8FF] py-20">
+      <section className="bg-gradient-to-br from-secondary via-secondary/50 to-background py-20">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between px-6 md:px-12 gap-12">
           {/* Left content */}
           <div className="max-w-xl text-center md:text-left">
