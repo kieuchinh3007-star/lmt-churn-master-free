@@ -1,6 +1,7 @@
 import { ChurnCalculator } from "@/components/ChurnCalculator";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Calculator, TrendingDown, BarChart3, Users, CheckCircle2, HelpCircle, Package, Truck, RotateCcw, ExternalLink, FileText, Shield, ScrollText } from "lucide-react";
 
 const Index = () => {
@@ -270,51 +271,43 @@ const Index = () => {
               </h2>
             </div>
 
-            <div className="space-y-4">
-              <Card className="border-border/50 shadow-[var(--shadow-card)]">
-                <CardHeader>
-                  <CardTitle className="text-lg">What is the Churn Rate Calculator and how does it work?</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    The Churn Rate Calculator helps you measure customer attrition over a period by comparing customers at start, customers at end, and new customers acquired. It uses the industry-standard formula: Churn Rate = (Lost Customers / Customers at Start) × 100%.
-                  </p>
-                </CardContent>
-              </Card>
+            <Accordion type="single" collapsible className="w-full space-y-4">
+              <AccordionItem value="item-1" className="border-border/50 bg-card rounded-lg px-6 shadow-[var(--shadow-card)]">
+                <AccordionTrigger className="text-left text-lg font-semibold hover:text-primary">
+                  What is the Churn Rate Calculator and how does it work?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground pt-2">
+                  The Churn Rate Calculator helps you measure customer attrition over a period by comparing customers at start, customers at end, and new customers acquired. It uses the industry-standard formula: Churn Rate = (Lost Customers / Customers at Start) × 100%.
+                </AccordionContent>
+              </AccordionItem>
 
-              <Card className="border-border/50 shadow-[var(--shadow-card)]">
-                <CardHeader>
-                  <CardTitle className="text-lg">How accurate is the Churn Rate Calculator for subscription businesses?</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    The Churn Rate Calculator uses standard industry formulas, making it ideal for subscription or SaaS businesses. For deeper insights, you can switch to revenue churn mode (MRR/ARR) or enable cohort-based analysis. Accuracy depends on the quality of your input data.
-                  </p>
-                </CardContent>
-              </Card>
+              <AccordionItem value="item-2" className="border-border/50 bg-card rounded-lg px-6 shadow-[var(--shadow-card)]">
+                <AccordionTrigger className="text-left text-lg font-semibold hover:text-primary">
+                  How accurate is the Churn Rate Calculator for subscription businesses?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground pt-2">
+                  The Churn Rate Calculator uses standard industry formulas, making it ideal for subscription or SaaS businesses. For deeper insights, you can switch to revenue churn mode (MRR/ARR) or enable cohort-based analysis. Accuracy depends on the quality of your input data.
+                </AccordionContent>
+              </AccordionItem>
 
-              <Card className="border-border/50 shadow-[var(--shadow-card)]">
-                <CardHeader>
-                  <CardTitle className="text-lg">Can the Churn Rate Calculator compute revenue or annualized churn?</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    Yes! The calculator supports both customer churn and revenue churn (MRR/ARR) modes. For monthly calculations, it also automatically displays annualized churn using the formula: 1 - (1 - monthly_churn)^12, giving you a yearly perspective.
-                  </p>
-                </CardContent>
-              </Card>
+              <AccordionItem value="item-3" className="border-border/50 bg-card rounded-lg px-6 shadow-[var(--shadow-card)]">
+                <AccordionTrigger className="text-left text-lg font-semibold hover:text-primary">
+                  Can the Churn Rate Calculator compute revenue or annualized churn?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground pt-2">
+                  Yes! The calculator supports both customer churn and revenue churn (MRR/ARR) modes. For monthly calculations, it also automatically displays annualized churn using the formula: 1 - (1 - monthly_churn)^12, giving you a yearly perspective.
+                </AccordionContent>
+              </AccordionItem>
 
-              <Card className="border-border/50 shadow-[var(--shadow-card)]">
-                <CardHeader>
-                  <CardTitle className="text-lg">How can I reduce churn after using the Churn Rate Calculator?</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    Use the actionable insights provided by the calculator: improve customer onboarding, run re-engagement campaigns, optimize pricing strategies, analyze churn-prone customer cohorts, conduct exit surveys, and implement proactive customer success initiatives based on your churn rate results.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
+              <AccordionItem value="item-4" className="border-border/50 bg-card rounded-lg px-6 shadow-[var(--shadow-card)]">
+                <AccordionTrigger className="text-left text-lg font-semibold hover:text-primary">
+                  How can I reduce churn after using the Churn Rate Calculator?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground pt-2">
+                  Use the actionable insights provided by the calculator: improve customer onboarding, run re-engagement campaigns, optimize pricing strategies, analyze churn-prone customer cohorts, conduct exit surveys, and implement proactive customer success initiatives based on your churn rate results.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
         </div>
       </section>
