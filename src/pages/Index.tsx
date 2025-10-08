@@ -1,6 +1,7 @@
 import { ChurnCalculator } from "@/components/ChurnCalculator";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Calculator, TrendingDown, BarChart3, Users, CheckCircle2, HelpCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Calculator, TrendingDown, BarChart3, Users, CheckCircle2, HelpCircle, Package, Truck, RotateCcw, ExternalLink } from "lucide-react";
 
 const Index = () => {
   return (
@@ -314,6 +315,109 @@ const Index = () => {
                 </CardContent>
               </Card>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Apps Section */}
+      <section className="container mx-auto px-4 py-16 md:py-24">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Our Apps 💡
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Discover powerful tools to optimize your e-commerce business
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {/* SyncTrack App */}
+            <Card className="border-border/50 shadow-[var(--shadow-card)] transition-all hover:shadow-[var(--shadow-elegant)] flex flex-col">
+              <CardHeader>
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center mb-4">
+                  <Package className="w-8 h-8 text-white" />
+                </div>
+                <CardTitle className="text-xl">SyncTrack – Auto Track Order</CardTitle>
+              </CardHeader>
+              <CardContent className="flex-1 flex flex-col">
+                <p className="text-muted-foreground mb-6 flex-1">
+                  Automatically sync and track orders from multiple carriers. Keep customers informed with real-time updates.
+                </p>
+                <Button 
+                  asChild
+                  className="w-full bg-gradient-to-r from-primary to-accent hover:opacity-90"
+                >
+                  <a 
+                    href="https://apps.shopify.com/synctrack" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2"
+                  >
+                    View App
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Estimated Shipping Date App */}
+            <Card className="border-border/50 shadow-[var(--shadow-card)] transition-all hover:shadow-[var(--shadow-elegant)] flex flex-col">
+              <CardHeader>
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center mb-4">
+                  <Truck className="w-8 h-8 text-white" />
+                </div>
+                <CardTitle className="text-xl">Estimated Shipping Date</CardTitle>
+              </CardHeader>
+              <CardContent className="flex-1 flex flex-col">
+                <p className="text-muted-foreground mb-6 flex-1">
+                  Show accurate delivery estimates on product pages to build trust and boost conversions.
+                </p>
+                <Button 
+                  asChild
+                  className="w-full bg-gradient-to-r from-primary to-accent hover:opacity-90"
+                >
+                  <a 
+                    href="https://apps.shopify.com/omega-estimated-shipping-date" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2"
+                  >
+                    View App
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Omega Returns Drive App */}
+            <Card className="border-border/50 shadow-[var(--shadow-card)] transition-all hover:shadow-[var(--shadow-elegant)] flex flex-col">
+              <CardHeader>
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center mb-4">
+                  <RotateCcw className="w-8 h-8 text-white" />
+                </div>
+                <CardTitle className="text-xl">Omega Returns Drive</CardTitle>
+              </CardHeader>
+              <CardContent className="flex-1 flex flex-col">
+                <p className="text-muted-foreground mb-6 flex-1">
+                  Simplify your return process and increase customer satisfaction with an easy self-service return portal.
+                </p>
+                <Button 
+                  asChild
+                  className="w-full bg-gradient-to-r from-primary to-accent hover:opacity-90"
+                >
+                  <a 
+                    href="https://apps.shopify.com/omega-returns-drive" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2"
+                  >
+                    View App
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
