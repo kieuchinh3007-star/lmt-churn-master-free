@@ -153,6 +153,14 @@ ${results.annualizedChurn ? `Annualized Churn,${results.annualizedChurn.toFixed(
     });
   };
 
+  const isFormValid = () => {
+    const start = parseFloat(customersAtStart);
+    const end = parseFloat(customersAtEnd);
+    const newCust = parseFloat(newCustomers);
+
+    return !isNaN(start) && start > 0 && !isNaN(end) && end >= 0 && !isNaN(newCust) && newCust >= 0;
+  };
+
   const getActionableTips = () => {
     if (!results) return [];
     
@@ -333,7 +341,8 @@ ${results.annualizedChurn ? `Annualized Churn,${results.annualizedChurn.toFixed(
           <div className="flex flex-wrap gap-3">
             <Button 
               onClick={calculateChurn}
-              className="flex-1 h-12 text-base font-semibold bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-all"
+              disabled={!isFormValid()}
+              className="flex-1 h-12 text-base font-semibold bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
             >
               <Calculator className="w-5 h-5 mr-2" />
               Calculate Churn Rate
