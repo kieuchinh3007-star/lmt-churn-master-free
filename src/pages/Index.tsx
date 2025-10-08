@@ -1,7 +1,7 @@
 import { ChurnCalculator } from "@/components/ChurnCalculator";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Calculator, TrendingDown, BarChart3, Users, CheckCircle2, HelpCircle, Package, Truck, RotateCcw, ExternalLink } from "lucide-react";
+import { Calculator, TrendingDown, BarChart3, Users, CheckCircle2, HelpCircle, Package, Truck, RotateCcw, ExternalLink, FileText, Shield, ScrollText } from "lucide-react";
 
 const Index = () => {
   return (
@@ -418,6 +418,114 @@ const Index = () => {
                 </Button>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* More Tools Like This Section */}
+      <section className="bg-muted/30 py-16 md:py-24">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                More Tools Like This
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Free tools to help you build trust and protect your business
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              {/* Shipping Policy Generator */}
+              <Card className="border-border/50 shadow-[var(--shadow-card)] transition-all hover:shadow-[var(--shadow-elegant)] flex flex-col">
+                <CardHeader>
+                  <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-secondary to-accent flex items-center justify-center mb-4">
+                    <Truck className="w-8 h-8 text-white" />
+                  </div>
+                  <CardTitle className="text-xl">Free Shipping Policy Generator</CardTitle>
+                </CardHeader>
+                <CardContent className="flex-1 flex flex-col">
+                  <p className="text-muted-foreground mb-6 flex-1">
+                    Create a professional shipping policy for your store in minutes. Build customer trust and reduce disputes.
+                  </p>
+                  <Button 
+                    asChild
+                    variant="secondary"
+                    className="w-full"
+                  >
+                    <a 
+                      href="https://synctrack.io/shipping-policy-generator/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2"
+                    >
+                      Generate Policy
+                      <ExternalLink className="w-4 h-4" />
+                    </a>
+                  </Button>
+                </CardContent>
+              </Card>
+
+              {/* Return & Refund Policy Generator */}
+              <Card className="border-border/50 shadow-[var(--shadow-card)] transition-all hover:shadow-[var(--shadow-elegant)] flex flex-col">
+                <CardHeader>
+                  <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-secondary to-accent flex items-center justify-center mb-4">
+                    <RotateCcw className="w-8 h-8 text-white" />
+                  </div>
+                  <CardTitle className="text-xl">Free Return & Refund Policy Generator</CardTitle>
+                </CardHeader>
+                <CardContent className="flex-1 flex flex-col">
+                  <p className="text-muted-foreground mb-6 flex-1">
+                    Generate a clear return and refund policy instantly. Protect your business and set customer expectations.
+                  </p>
+                  <Button 
+                    asChild
+                    variant="secondary"
+                    className="w-full"
+                  >
+                    <a 
+                      href="https://synctrack.io/return-refund-policy-generator/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2"
+                    >
+                      Generate Policy
+                      <ExternalLink className="w-4 h-4" />
+                    </a>
+                  </Button>
+                </CardContent>
+              </Card>
+
+              {/* Terms & Conditions Generator */}
+              <Card className="border-border/50 shadow-[var(--shadow-card)] transition-all hover:shadow-[var(--shadow-elegant)] flex flex-col">
+                <CardHeader>
+                  <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-secondary to-accent flex items-center justify-center mb-4">
+                    <ScrollText className="w-8 h-8 text-white" />
+                  </div>
+                  <CardTitle className="text-xl">Free Terms & Conditions Generator</CardTitle>
+                </CardHeader>
+                <CardContent className="flex-1 flex flex-col">
+                  <p className="text-muted-foreground mb-6 flex-1">
+                    Create legally compliant terms and conditions for your website. Protect your business with proper documentation.
+                  </p>
+                  <Button 
+                    asChild
+                    variant="secondary"
+                    className="w-full"
+                  >
+                    <a 
+                      href="https://synctrack.io/terms-conditions-generator/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2"
+                    >
+                      Generate Terms
+                      <ExternalLink className="w-4 h-4" />
+                    </a>
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </div>
       </section>
