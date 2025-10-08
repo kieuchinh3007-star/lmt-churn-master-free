@@ -288,7 +288,7 @@ const Index = () => {
 
             <Card className="border-border/50 shadow-[var(--shadow-card)] bg-gradient-to-br from-secondary/5 to-primary/5">
               <CardHeader>
-                <CardTitle className="text-secondary">Annualized Churn</CardTitle>
+                <CardTitle className="text-[#fac02e]">Annualized Churn</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-muted-foreground">
