@@ -176,13 +176,18 @@ ${results.annualizedChurn ? `Annualized Churn,${results.annualizedChurn.toFixed(
       tips.push("Analyze churn by cohort to identify at-risk customer segments.");
       tips.push("Create targeted retention campaigns for high-value customers.");
     } else if (churn > 5) {
-      tips.push("Your churn rate is healthy. Continue monitoring trends over time.");
-      tips.push("Build customer loyalty programs to maintain low churn.");
-      tips.push("Gather regular feedback to stay ahead of potential issues.");
+      tips.push("Great job! Your churn rate is healthy and within industry standards.");
+      tips.push("Build customer loyalty programs and referral incentives to maintain low churn.");
+      tips.push("Continue gathering feedback and addressing concerns proactively.");
+    } else if (churn > 2) {
+      tips.push("Excellent retention! Your customers are highly satisfied with your product.");
+      tips.push("Focus on expansion revenue through upsells and cross-sells.");
+      tips.push("Share your retention best practices across teams to maintain this performance.");
     } else {
-      tips.push("Excellent churn rate! Share your retention strategies with your team.");
-      tips.push("Focus on upselling and expansion to maximize customer lifetime value.");
-      tips.push("Document your best practices for maintaining low churn.");
+      tips.push("Outstanding! Your churn rate is exceptionally low - you're retaining nearly all customers.");
+      tips.push("Consider case studies or testimonials to showcase your customer success stories.");
+      tips.push("Invest in customer advocacy programs and explore strategic partnerships.");
+      tips.push("Your retention strategy is a competitive advantage - document and scale it.");
     }
 
     return tips;
