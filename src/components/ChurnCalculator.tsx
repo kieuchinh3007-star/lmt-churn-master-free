@@ -426,15 +426,33 @@ ${results.annualizedChurn ? `Annualized Churn,${results.annualizedChurn.toFixed(
               </div>
 
               {/* Actionable Tips */}
-              <div className="p-6 rounded-lg bg-muted/50 border border-border">
+              <div className={`p-6 rounded-lg border ${
+                results.churnRate > 10 
+                  ? 'bg-red-50/50 border-red-200 dark:bg-red-950/20 dark:border-red-900/30' 
+                  : results.churnRate > 5 
+                  ? 'bg-amber-50/50 border-amber-200 dark:bg-amber-950/20 dark:border-amber-900/30'
+                  : 'bg-green-50/50 border-green-200 dark:bg-green-950/20 dark:border-green-900/30'
+              }`}>
                 <div className="flex items-center gap-2 mb-4">
-                  <Lightbulb className="w-5 h-5 text-accent" />
+                  <Lightbulb className={`w-5 h-5 ${
+                    results.churnRate > 10 
+                      ? 'text-red-600 dark:text-red-400' 
+                      : results.churnRate > 5 
+                      ? 'text-amber-600 dark:text-amber-400'
+                      : 'text-green-600 dark:text-green-400'
+                  }`} />
                   <h3 className="text-lg font-semibold text-foreground">Actionable Insights</h3>
                 </div>
                 <ul className="space-y-3">
                   {getActionableTips().map((tip, index) => (
                     <li key={index} className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-[#fac02e] mt-0.5 flex-shrink-0" />
+                      <CheckCircle2 className={`w-5 h-5 mt-0.5 flex-shrink-0 ${
+                        results.churnRate > 10 
+                          ? 'text-red-600 dark:text-red-400' 
+                          : results.churnRate > 5 
+                          ? 'text-amber-600 dark:text-amber-400'
+                          : 'text-green-600 dark:text-green-400'
+                      }`} />
                       <span className="text-muted-foreground">{tip}</span>
                     </li>
                   ))}
